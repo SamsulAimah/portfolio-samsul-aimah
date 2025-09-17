@@ -29,7 +29,7 @@ const Blog = () => {
         "PanaceaMed is a modern health platform that provides trusted medical information, online consultation services, and personal health management to support your healthy lifestyle.",
       image:
         "https://mir-s3-cdn-cf.behance.net/project_modules/disp/f0eb11221981649.67dd8ff8cae15.jpg",
-      date: "Mei, 2024",
+      date: "Mei, 2025",
       category: "UI/UX Design",
       behanceUrl: "https://www.behance.net/gallery/221981649/panaceamedid",
     },
