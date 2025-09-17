@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Download, Eye } from "lucide-react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import Profil from "../assets/pp.jpg";
+import Profil from "../assets/profil.png";
 
 const Hero = () => {
   const heroRef = useRef(null);

@@ -247,11 +247,11 @@ const ProjectsPage = () => {
     },
     {
       id: 8,
-      title: "Redesign App TIX.ID",
+      title: "Redesign Website HiCollegues (Case Study Magang)",
       description:
-        "I redesigned TIX ID to simplify the movie ticket booking experience, improving navigation, seat selection, and payment flow to make the process faster and more user-friendly.",
+        "I redesigned HiCollegues, a course bootcamp website, to improve navigation and streamline the learning experience. The new layout makes it easier for users to browse courses, register, and track their progress with a cleaner and more engaging interface.",
       image:
-        "https://cdn.dribbble.com/userupload/14553987/file/original-0a3a726712de189152897030ac15f199.png?resize=752x&vertical=center",
+        "https://cdn.dribbble.com/userupload/14635762/file/original-7f5ba58ea740773616864c0100f61092.png?resize=752x&vertical=center",
       timeline: [
         {
           phase: "Research",
@@ -274,15 +274,15 @@ const ProjectsPage = () => {
           description: "Reduced task completion time by 60%",
         },
       ],
-      behanceUrl: "https://www.behance.net/gallery/183802307/Case-Study-Redesign-App-TIX-ID",
+      behanceUrl: "https://www.behance.net/gallery/188067107/Studi-kasus-seleksi-magang-(HiCollegues)",
     },
     {
       id: 9,
-      title: "Redesign App Cariilmu",
+      title: "Design App Donasiku (Case Study Magang)",
       description:
-        "I redesigned CariIlmu, a bootcamp learning platform, to create a more intuitive and seamless user experience. The new design focuses on simplifying navigation, improving course discovery, and making the learning process more engaging and accessible.",
+        "I designed Donasiku, an app for donations and concert ticket purchases, with a focus on making giving and event participation simple and enjoyable. The design provides a smooth donation flow, easy ticket booking, and a clean interface that encourages users to support causes they care about.",
       image:
-        "https://cdn.dribbble.com/userupload/14635885/file/original-a4536a2085230a3f63f20fa527eb0e5f.png?resize=752x&vertical=center",
+        "https://cdn.dribbble.com/userupload/14554171/file/original-9347aec152c7d9df44a0f5fe3933c6ea.png?resize=752x&vertical=center",
       timeline: [
         {
           phase: "Research",
@@ -306,7 +306,93 @@ const ProjectsPage = () => {
         },
       ],
       behanceUrl:
-        "https://www.behance.net/gallery/183442095/Redesign-Apps-Cariilmu",
+        "https://www.behance.net/gallery/187694187/Studi-kasus-seleksi-magang-(-Suitmedia-)",
+    },
+    {
+      id: 10,
+      title: "Libur.In",
+      description:
+        "I designed Libur.In, a hotel and villa booking website, with a focus on delivering a smooth and intuitive booking experience. The design makes it easy for users to search accommodations, compare options, and complete reservations with a clean and modern interface.",
+      image:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/disp/7abc9c224730363.681088029976a.png",
+      timeline: [
+        {
+          phase: "Wireframe",
+          description: "Information architecture and wireframes",
+        },
+        {
+          phase: "Hi-Fi Design",
+          description: "Dashboard UI and data visualization design",
+        },
+        {
+          phase: "Prototype",
+          description: "Interactive prototype with micro-interactions",
+        },
+        {
+          phase: "Final Result",
+          description: "Reduced task completion time by 60%",
+        },
+      ],
+      behanceUrl: "https://www.behance.net/gallery/224730363/Liburin",
+    },
+    {
+      id: 11,
+      title: "Barna Beauty",
+      description:
+        "I designed Bana Beauty, an e-commerce website for skincare and beauty products, focusing on a clean and elegant interface. The design makes it easy for users to browse products like serums, read details, and complete purchases seamlessly.",
+      image:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b199f5221982183.67dd91e078786.png",
+      timeline: [
+        {
+          phase: "Wireframe",
+          description: "Information architecture and wireframes",
+        },
+        {
+          phase: "Hi-Fi Design",
+          description: "Dashboard UI and data visualization design",
+        },
+        {
+          phase: "Prototype",
+          description: "Interactive prototype with micro-interactions",
+        },
+        {
+          phase: "Final Result",
+          description: "Reduced task completion time by 60%",
+        },
+      ],
+      behanceUrl: "https://www.behance.net/gallery/221982183/Barna-Beauty",
+    },
+    {
+      id: 12,
+      title: "Magic Sell Dashboard",
+      description:
+        "I designed Magic Sell, a modern sales management dashboard, to help users monitor sales performance, track analytics, and manage products efficiently. The layout provides clear data visualization, easy navigation, and an intuitive interface for better decision-making.",
+      image:
+        "https://mir-s3-cdn-cf.behance.net/project_modules/disp/41b368219572357.67b48540e79f6.png",
+      timeline: [
+        {
+          phase: "Research",
+          description: "Patient interviews and accessibility audit",
+        },
+        {
+          phase: "Wireframe",
+          description: "Accessible design patterns and user flows",
+        },
+        {
+          phase: "Hi-Fi Design",
+          description: "High-contrast, accessible visual design",
+        },
+        {
+          phase: "Prototype",
+          description: "Tested with screen readers and assistive technology",
+        },
+        {
+          phase: "Final Result",
+          description: "Improved accessibility score from 60% to 95%",
+        },
+      ],
+      behanceUrl:
+        "https://www.behance.net/gallery/219572357/Dashboard",
     },
   ];
 
