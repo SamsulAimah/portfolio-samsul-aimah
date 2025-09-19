@@ -111,6 +111,7 @@ const Certificates = () => {
 
   return (
     <section
+    id="certificates"
       ref={certificatesRef}
       className="py-20 px-6 bg-gray-50 dark:bg-gray-800"
     >

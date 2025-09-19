@@ -65,6 +65,7 @@ const Experience = () => {
 
   return (
     <section
+    id="experience"
       ref={experienceRef}
       className="py-20 px-6 bg-white dark:bg-gray-900"
     >

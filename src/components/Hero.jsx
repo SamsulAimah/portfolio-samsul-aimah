@@ -15,7 +15,7 @@ const Hero = () => {
       "Web Designer",
       "UI Designer",
       "UX Researcher",
-      "Graphic Designer"
+      "Graphic Designer",
     ],
     loop: true,
     typeSpeed: 100,
@@ -28,7 +28,7 @@ const Hero = () => {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     if (heroRef.current) observer.observe(heroRef.current);
@@ -37,6 +37,7 @@ const Hero = () => {
 
   return (
     <section
+      id="hero" // <-- Tambahkan id untuk link dari navbar
       ref={heroRef}
       className="min-h-screen relative overflow-hidden flex items-center justify-center px-6"
     >
@@ -110,17 +111,19 @@ const Hero = () => {
             <button className="group px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-3">
               <Eye className="w-5 h-5" />
               View My Work
-              <div className="group-hover:translate-x-1 transition-transform duration-300">
-                →
-              </div>
+              
             </button>
           </a>
 
           {/* Download CV Button */}
-          <button className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 dark:border-gray-700 text-gray-900 dark:text-white rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 flex items-center gap-3">
+          <a
+            href="/cv.pdf"
+            download="CV-Samsul-Aimah.pdf"
+            className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 dark:border-gray-700 text-gray-900 dark:text-white rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 flex items-center gap-3"
+          >
             <Download className="w-5 h-5" />
             Download CV
-          </button>
+          </a>
         </div>
       </div>
     </section>

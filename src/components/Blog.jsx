@@ -56,7 +56,7 @@ const Blog = () => {
   ];
 
   return (
-    <section ref={blogRef} className="py-20 px-6 bg-white dark:bg-gray-900">
+    <section id="blog" ref={blogRef} className="py-20 px-6 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
