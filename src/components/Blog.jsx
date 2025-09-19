@@ -65,10 +65,10 @@ const Blog = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-6">
-            🚀 Design Insights
+            🚀 Design Highlight
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Sharing thoughts on design, user experience, and the future of digital products.
+          Sharing thoughts on design, user experience, and digital innovation exploring the creative process, what makes a product compelling, and how technology and design are shaping the future.
           </p>
         </div>
 

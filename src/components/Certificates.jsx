@@ -111,7 +111,7 @@ const Certificates = () => {
 
   return (
     <section
-    id="certificates"
+      id="certificates"
       ref={certificatesRef}
       className="py-20 px-6 bg-gray-50 dark:bg-gray-800"
     >
@@ -155,8 +155,9 @@ const Certificates = () => {
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-auto max-h-48 object-contain bg-gray-100 dark:bg-gray-900 p-2 rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
+
                   {cert.verified && (
                     <div className="absolute top-3 right-3 bg-green-500 text-white p-2 rounded-full">
                       <Award className="w-4 h-4" />
@@ -194,12 +195,12 @@ const Certificates = () => {
         {selectedCert && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
             <div className="bg-white dark:bg-gray-800 rounded-3xl max-w-3xl w-full shadow-xl overflow-hidden">
-              <div className="p-8">
+              <div className="p-6 md:p-8">
                 {/* Header Modal */}
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex justify-between items-start mb-4 md:mb-6">
                   <div className="flex items-center gap-3">
-                    <Award className="w-8 h-8 text-indigo-600" />
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    <Award className="w-6 h-6 md:w-8 md:h-8 text-indigo-600" />
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white leading-snug">
                       {selectedCert.title}
                     </h3>
                   </div>
@@ -207,23 +208,26 @@ const Certificates = () => {
                     onClick={() => setSelectedCert(null)}
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors"
                   >
-                    <X className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                    <X className="w-5 h-5 md:w-6 md:h-6 text-gray-600 dark:text-gray-300" />
                   </button>
                 </div>
 
                 {/* Gambar di Modal */}
-                <img
-                  src={selectedCert.image}
-                  alt={selectedCert.title}
-                  className="w-full aspect-video object-cover rounded-2xl mb-6"
-                />
+                <div className="flex justify-center">
+                  <img
+                    src={selectedCert.image}
+                    alt={selectedCert.title}
+                    className="max-h-[65vh] w-auto object-contain rounded-xl bg-gray-100 dark:bg-gray-900 p-2 md:p-4"
+                  />
+                </div>
 
                 {/* Detail di Modal */}
-                <div className="text-center">
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-1">
-                    Issued by <strong>{selectedCert.issuer}</strong>
+                <div className="text-center mt-4">
+                  <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-1">
+                    Issued by{" "}
+                    <span className="font-medium">{selectedCert.issuer}</span>
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
                     {selectedCert.date}
                   </p>
                 </div>

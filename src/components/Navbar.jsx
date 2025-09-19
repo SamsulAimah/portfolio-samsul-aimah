@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import {
+  Menu,
+  X,
+  Moon,
+  Sun,
+  Home,
+  User,
+  Folder,
+  Award,
+  Briefcase,
+  BookOpen,
+  Mail,
+} from "lucide-react";
 
 const Navbar = ({ isDark, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState();
 
   const navLinks = [
-    { name: "Home", href: "#hero", id: "hero" },
-    { name: "About", href: "#about", id: "about" },
-    { name: "Projects", href: "#project", id: "project" },
-    { name: "Certificates", href: "#certificates", id: "certificates" },
-    { name: "Experience", href: "#experience", id: "experience" },
-    { name: "Blog", href: "#blog", id: "blog" },
-    { name: "Contact", href: "#contact", id: "contact" },
+    { name: "Home", href: "#hero", id: "hero", icon: <Home size={18} /> },
+    { name: "About", href: "#about", id: "about", icon: <User size={18} /> },
+    { name: "Projects", href: "#project", id: "project", icon: <Folder size={18} /> },
+    { name: "Certificates", href: "#certificates", id: "certificates", icon: <Award size={18} /> },
+    { name: "Experience", href: "#experience", id: "experience", icon: <Briefcase size={18} /> },
+    { name: "Highlight", href: "#blog", id: "blog", icon: <BookOpen size={18} /> },
+    { name: "Contact", href: "#contact", id: "contact", icon: <Mail size={18} /> },
   ];
 
   // Scrollspy
@@ -95,7 +107,8 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
         {/* Header Sidebar */}
         <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">
-            Menu
+            Samsul{" "}
+            <span className="text-indigo-600 dark:text-indigo-400">Aimah</span>
           </h2>
           <button
             onClick={() => setIsOpen(false)}
@@ -105,19 +118,20 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
           </button>
         </div>
 
-        {/* Links Sidebar */}
+        {/* Links Sidebar (dengan ikon) */}
         <div className="flex flex-col p-4 space-y-4">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-sm font-medium transition-colors duration-300 ${
+              className={`flex items-center gap-3 text-sm font-medium transition-colors duration-300 ${
                 activeSection === link.id
                   ? "text-indigo-600 dark:text-indigo-400"
                   : "text-gray-700 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400"
               }`}
             >
+              {link.icon}
               {link.name}
             </a>
           ))}
