@@ -11,11 +11,12 @@ const ProjectsPage = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        console.log("IntersectionObserver:", entry.isIntersecting);
         if (entry.isIntersecting) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" } // lebih sensitif di mobile
     );
 
     if (projectsRef.current) {
@@ -149,7 +150,8 @@ const ProjectsPage = () => {
           description: "Delivered product with 40% conversion increase",
         },
       ],
-      behanceUrl: "https://www.behance.net/gallery/196861715/Design-App-WhatsApp",
+      behanceUrl:
+        "https://www.behance.net/gallery/196861715/Design-App-WhatsApp",
     },
     {
       id: 5,
@@ -180,7 +182,8 @@ const ProjectsPage = () => {
           description: "Reduced task completion time by 60%",
         },
       ],
-      behanceUrl: "https://www.behance.net/gallery/183802307/Case-Study-Redesign-App-TIX-ID",
+      behanceUrl:
+        "https://www.behance.net/gallery/183802307/Case-Study-Redesign-App-TIX-ID",
     },
     {
       id: 6,
@@ -243,7 +246,8 @@ const ProjectsPage = () => {
           description: "Delivered product with 40% conversion increase",
         },
       ],
-      behanceUrl: "https://www.behance.net/gallery/190780059/Sistem-Informasi-Pengolahan-Sampah-EcoSync",
+      behanceUrl:
+        "https://www.behance.net/gallery/190780059/Sistem-Informasi-Pengolahan-Sampah-EcoSync",
     },
     {
       id: 8,
@@ -274,7 +278,8 @@ const ProjectsPage = () => {
           description: "Reduced task completion time by 60%",
         },
       ],
-      behanceUrl: "https://www.behance.net/gallery/188067107/Studi-kasus-seleksi-magang-(HiCollegues)",
+      behanceUrl:
+        "https://www.behance.net/gallery/188067107/Studi-kasus-seleksi-magang-(HiCollegues)",
     },
     {
       id: 9,
@@ -391,8 +396,7 @@ const ProjectsPage = () => {
           description: "Improved accessibility score from 60% to 95%",
         },
       ],
-      behanceUrl:
-        "https://www.behance.net/gallery/219572357/Dashboard",
+      behanceUrl: "https://www.behance.net/gallery/219572357/Dashboard",
     },
   ];
 
@@ -417,7 +421,7 @@ const ProjectsPage = () => {
             className={`text-4xl md:text-5xl font-bold text-center w-full text-gray-900 dark:text-white transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
-                : "opacity-0 -translate-y-10"
+                : "md:opacity-0 md:-translate-y-10 opacity-100 translate-y-0"
             }`}
           >
             All Projects
@@ -426,9 +430,12 @@ const ProjectsPage = () => {
 
         {/* Projects Grid */}
         <div
-          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
-          }`}
+          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300
+            ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-100 translate-x-0 md:opacity-0 md:translate-x-20"
+            }`}
         >
           {projects.map((project) => (
             <div
@@ -443,7 +450,6 @@ const ProjectsPage = () => {
                 />
               </div>
 
-              {/* Make content flexible */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {project.title}
@@ -452,7 +458,6 @@ const ProjectsPage = () => {
                   {project.description}
                 </p>
 
-                {/* Buttons stick to bottom */}
                 <div className="mt-auto flex items-center justify-between gap-4">
                   <button
                     onClick={() => setSelectedProject(project)}
@@ -521,6 +526,9 @@ const ProjectsPage = () => {
                         <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                           {phase.phase}
                         </h5>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          {phase.description}
+                        </p>
                       </div>
                     </div>
                   ))}

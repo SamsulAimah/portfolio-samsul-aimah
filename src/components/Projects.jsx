@@ -127,8 +127,9 @@ const Projects = () => {
       className="py-20 px-6 bg-white dark:bg-gray-900"
     >
       <div className="max-w-6xl mx-auto">
+        {/* Heading */}
         <h2
-          className={`text-4xl md:text-5xl font-bold text-center text-purple-600 dark:text-purple-400 mb-16 transition-all duration-1000 ${
+          className={`text-3xl sm:text-4xl md:text-5xl font-bold text-center text-purple-600 dark:text-purple-400 mb-16 transition-all duration-1000 ${
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-10"
@@ -138,15 +139,18 @@ const Projects = () => {
         </h2>
 
         {/* Projects Grid */}
-        <div
-          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ${
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
-          }`}
-        >
-          {projects.map((project) => (
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
+              className={`group bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 ease-out hover:-translate-y-2 flex flex-col h-full
+              ${
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : index % 2 === 0
+                  ? "opacity-0 -translate-x-20"
+                  : "opacity-0 translate-x-20"
+              }`}
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -156,19 +160,20 @@ const Projects = () => {
                 />
               </div>
 
+              {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 flex-grow">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 flex-grow">
                   {project.description}
                 </p>
 
-                {/* Button Container fixed di bawah */}
+                {/* Buttons */}
                 <div className="mt-6 flex items-center justify-between gap-4">
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:gap-3 transition-all duration-300 text-base"
+                    className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:gap-3 transition-all duration-300 text-sm sm:text-base"
                   >
                     View Case Study
                     <ArrowRight className="w-4 h-4" />
@@ -178,7 +183,7 @@ const Projects = () => {
                     href={project.behanceUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-semibold shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm"
+                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg font-semibold shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
                   >
                     <ExternalLink className="w-4 h-4" />
                     Behance
@@ -203,10 +208,11 @@ const Projects = () => {
         {/* Case Study Modal */}
         {selectedProject && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-white dark:bg-gray-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-fadeIn">
               <div className="p-8">
+                {/* Header */}
                 <div className="flex justify-between items-start mb-6">
-                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                     {selectedProject.title}
                   </h3>
                   <button
@@ -217,16 +223,17 @@ const Projects = () => {
                   </button>
                 </div>
 
+                {/* Image */}
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   className="w-full aspect-video object-cover rounded-2xl mb-8"
                 />
 
-                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                {/* Timeline */}
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Design Process
                 </h4>
-
                 <div className="space-y-6">
                   {selectedProject.timeline.map((phase, index) => (
                     <div key={index} className="flex gap-4">
@@ -234,7 +241,7 @@ const Projects = () => {
                         {index + 1}
                       </div>
                       <div>
-                        <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        <h5 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-2">
                           {phase.phase}
                         </h5>
                       </div>
@@ -246,6 +253,31 @@ const Projects = () => {
           </div>
         )}
       </div>
+
+      {/* Animations */}
+      <style>{`
+        @keyframes slideInLeft {
+          from { opacity: 0; transform: translateX(-50px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+          from { opacity: 0; transform: translateX(50px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(0.95); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .animate-slideInLeft {
+          animation: slideInLeft 0.8s ease forwards;
+        }
+        .animate-slideInRight {
+          animation: slideInRight 0.8s ease forwards;
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.4s ease forwards;
+        }
+      `}</style>
     </section>
   );
 };
