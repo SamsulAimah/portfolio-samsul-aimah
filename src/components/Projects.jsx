@@ -256,28 +256,28 @@ const Projects = () => {
 
       {/* Animations */}
       <style>{`
-        @keyframes slideInLeft {
-          from { opacity: 0; transform: translateX(-50px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-          from { opacity: 0; transform: translateX(50px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
-        }
-        .animate-slideInLeft {
-          animation: slideInLeft 0.8s ease forwards;
-        }
-        .animate-slideInRight {
-          animation: slideInRight 0.8s ease forwards;
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.4s ease forwards;
-        }
-      `}</style>
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-slideInLeft {
+    animation: slideInLeft 3s cubic-bezier(0.50, 0.8, 0.25, 1) forwards;
+  }
+  .animate-slideInRight {
+    animation: slideInRight 3s cubic-bezier(0.50, 0.8, 0.25, 1) forwards;
+  }
+  .animate-fadeIn {
+    animation: fadeIn 2s ease-out forwards;
+  }
+`}</style>
     </section>
   );
 };
