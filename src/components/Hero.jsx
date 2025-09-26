@@ -1,3 +1,4 @@
+// src/components/Hero.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { Download, Eye } from "lucide-react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -7,7 +8,7 @@ const Hero = () => {
   const heroRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Typewriter effect (tanpa cursor di sini)
+  // Typewriter effect
   const [displayedText] = useTypewriter({
     words: [
       "UI/UX Designer",
@@ -37,15 +38,24 @@ const Hero = () => {
 
   return (
     <section
-      id="hero" // <-- Tambahkan id untuk link dari navbar
+      id="hero"
       ref={heroRef}
-      className="min-h-screen relative overflow-hidden flex items-center justify-center px-6"
+      className="relative h-screen sm:min-h-screen flex items-center justify-center px-6 overflow-hidden"
     >
-      {/* Background with glassmorphism style */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-950">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
+      {/* 🎥 Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 min-w-full min-h-full object-cover -z-0"
+      >
+        <source src="/videoHero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay biar teks lebih jelas */}
+      <div className="absolute inset-0 bg-black/40 -z-10"></div>
 
       {/* Content */}
       <div
@@ -74,25 +84,20 @@ const Hero = () => {
 
         {/* Headline */}
         <h1
-          className={`text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight transition-all duration-1000 delay-400 ${
+          className={`text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight transition-all duration-1000 delay-400 ${
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
           }`}
         >
-          {/* Nama */}
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-2">
-            Samsul Aimah
-          </span>
-
-          {/* Roles + Cursor */}
+          <span className="block mb-2">Samsul Aimah</span>
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
             {displayedText}
-            <Cursor cursorStyle="|" cursorColor="#7c3aed" /> {/* warna ungu */}
+            <Cursor cursorStyle="|" cursorColor="#a78bfa" />
           </span>
         </h1>
 
         {/* Subtitle */}
         <p
-          className={`text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
+          className={`text-base sm:text-xl md:text-2xl  text-white mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -106,20 +111,17 @@ const Hero = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* View Work Button */}
           <a href="#project">
             <button className="group px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-3">
               <Eye className="w-5 h-5" />
               View My Work
-              
             </button>
           </a>
 
-          {/* Download CV Button */}
           <a
             href="/cv.pdf"
             download="CV-Samsul-Aimah.pdf"
-            className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 dark:border-gray-700 text-gray-900 dark:text-white rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 flex items-center gap-3"
+            className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 dark:border-gray-700 text-indigo-700 rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 flex items-center gap-3"
           >
             <Download className="w-5 h-5" />
             Download CV
