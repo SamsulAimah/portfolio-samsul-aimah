@@ -9,7 +9,7 @@ const Footer = () => {
           <p className="text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
             © Samsul Aimah 
           </p>
-          <p className="text-gray-600 dark:text-gray-500">Latest Update: September 2025</p>
+          <p className="text-gray-600 dark:text-gray-500">Latest Update: Oktober 2025</p>
         </div>
       </div>
     </footer>

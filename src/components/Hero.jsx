@@ -8,7 +8,6 @@ const Hero = () => {
   const heroRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Typewriter effect
   const [displayedText] = useTypewriter({
     words: [
       "UI/UX Designer",
@@ -40,21 +39,10 @@ const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative h-screen sm:min-h-screen flex items-center justify-center px-6 overflow-hidden"
+      className="relative h-screen sm:min-h-screen flex items-center justify-center px-6 overflow-hidden 
+      bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-700"
     >
-      {/* 🎥 Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 min-w-full min-h-full object-cover -z-0"
-      >
-        <source src="/videoHero.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Overlay biar teks lebih jelas */}
+      {/* Overlay optional biar ada efek gelap */}
       <div className="absolute inset-0 bg-black/40 -z-10"></div>
 
       {/* Content */}
@@ -89,7 +77,7 @@ const Hero = () => {
           }`}
         >
           <span className="block mb-2">Samsul Aimah</span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
             {displayedText}
             <Cursor cursorStyle="|" cursorColor="#a78bfa" />
           </span>
@@ -97,7 +85,7 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p
-          className={`text-base sm:text-xl md:text-2xl  text-white mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
+          className={`text-base sm:text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -121,7 +109,7 @@ const Hero = () => {
           <a
             href="/cv.pdf"
             download="CV-Samsul-Aimah.pdf"
-            className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 dark:border-gray-700 text-indigo-700 rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 flex items-center gap-3"
+            className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-white text-white rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 flex items-center gap-3"
           >
             <Download className="w-5 h-5" />
             Download CV

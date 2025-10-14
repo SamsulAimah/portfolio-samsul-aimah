@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { Figma, Layers, Search, Zap, Smartphone, Users } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Profil from "../assets/pp.jpg";
+import Profil from "../assets/Profil.jpg";
 
 const About = () => {
   const aboutRef = useRef(null);
