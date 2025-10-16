@@ -459,13 +459,13 @@ const ProjectsPage = () => {
                 </p>
 
                 <div className="mt-auto flex items-center justify-between gap-4">
-                  <button
+                  {/* <button
                     onClick={() => setSelectedProject(project)}
                     className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:gap-3 transition-all duration-300 text-base"
                   >
                     View Case Study
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </button> */}
 
                   <a
                     href={project.behanceUrl}
