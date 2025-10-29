@@ -367,37 +367,37 @@ const ProjectsPage = () => {
       ],
       behanceUrl: "https://www.behance.net/gallery/221982183/Barna-Beauty",
     },
-    {
-      id: 12,
-      title: "Magic Sell Dashboard",
-      description:
-        "I designed Magic Sell, a modern sales management dashboard, to help users monitor sales performance, track analytics, and manage products efficiently. The layout provides clear data visualization, easy navigation, and an intuitive interface for better decision-making.",
-      image:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/disp/41b368219572357.67b48540e79f6.png",
-      timeline: [
-        {
-          phase: "Research",
-          description: "Patient interviews and accessibility audit",
-        },
-        {
-          phase: "Wireframe",
-          description: "Accessible design patterns and user flows",
-        },
-        {
-          phase: "Hi-Fi Design",
-          description: "High-contrast, accessible visual design",
-        },
-        {
-          phase: "Prototype",
-          description: "Tested with screen readers and assistive technology",
-        },
-        {
-          phase: "Final Result",
-          description: "Improved accessibility score from 60% to 95%",
-        },
-      ],
-      behanceUrl: "https://www.behance.net/gallery/219572357/Dashboard",
-    },
+    // {
+    //   id: 12,
+    //   title: "Magic Sell Dashboard",
+    //   description:
+    //     "I designed Magic Sell, a modern sales management dashboard, to help users monitor sales performance, track analytics, and manage products efficiently. The layout provides clear data visualization, easy navigation, and an intuitive interface for better decision-making.",
+    //   image:
+    //     "https://mir-s3-cdn-cf.behance.net/project_modules/disp/41b368219572357.67b48540e79f6.png",
+    //   timeline: [
+    //     {
+    //       phase: "Research",
+    //       description: "Patient interviews and accessibility audit",
+    //     },
+    //     {
+    //       phase: "Wireframe",
+    //       description: "Accessible design patterns and user flows",
+    //     },
+    //     {
+    //       phase: "Hi-Fi Design",
+    //       description: "High-contrast, accessible visual design",
+    //     },
+    //     {
+    //       phase: "Prototype",
+    //       description: "Tested with screen readers and assistive technology",
+    //     },
+    //     {
+    //       phase: "Final Result",
+    //       description: "Improved accessibility score from 60% to 95%",
+    //     },
+    //   ],
+    //   behanceUrl: "https://www.behance.net/gallery/219572357/Dashboard",
+    // },
   ];
 
   return (
