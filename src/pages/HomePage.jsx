@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Skils from "../components/Skils";
 import Projects from "../components/Projects";
 import Certificates from "../components/Certificates";
 import Experience from "../components/Experience";
@@ -41,6 +42,7 @@ function HomePage() {
       {/* Section lain */}
       <Hero />
       <About />
+      <Skils/>
       <Projects />
       <Certificates />
       <Experience />

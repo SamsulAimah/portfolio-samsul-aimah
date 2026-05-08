@@ -17,15 +17,16 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState();
 
-  const navLinks = [
-    { name: "Home", href: "#hero", id: "hero", icon: <Home size={18} /> },
-    { name: "About", href: "#about", id: "about", icon: <User size={18} /> },
-    { name: "Projects", href: "#project", id: "project", icon: <Folder size={18} /> },
-    { name: "Certificates", href: "#certificates", id: "certificates", icon: <Award size={18} /> },
-    { name: "Experience", href: "#experience", id: "experience", icon: <Briefcase size={18} /> },
-    { name: "Highlight", href: "#blog", id: "blog", icon: <BookOpen size={18} /> },
-    { name: "Contact", href: "#contact", id: "contact", icon: <Mail size={18} /> },
-  ];
+const navLinks = [
+  { name: "Home", href: "#hero", id: "hero", icon: <Home size={18} /> },
+  { name: "About", href: "#about", id: "about", icon: <User size={18} /> },
+  { name: "Skils", href: "#skills", id: "skills", icon: <User size={18} /> },
+  { name: "Projects", href: "#project", id: "project", icon: <Folder size={18} /> },
+  { name: "Certificates", href: "#certificates", id: "certificates", icon: <Award size={18} /> },
+  { name: "Experience", href: "#experience", id: "experience", icon: <Briefcase size={18} /> },
+  { name: "Highlight", href: "#blog", id: "blog", icon: <BookOpen size={18} /> },
+  { name: "Contact", href: "#contact", id: "contact", icon: <Mail size={18} /> },
+];
 
   // Scrollspy
   useEffect(() => {

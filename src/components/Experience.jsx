@@ -23,6 +23,19 @@ const Experience = () => {
   }, []);
 
   const experiences = [
+     {
+      company: "PT Ivonesia Solusi Data ",
+      role: " UI/UX Designer Intern",
+      period: "November 2025 - Mei 2026",
+      location: "Jakarta Selatan",
+    highlights: [
+  "Designed user-centered interfaces for internal and client projects such as Sociomile and KB AI.",
+  "Created modern UI/UX designs focused on usability, accessibility, and seamless user experience.",
+  "Collaborated closely with product managers and developers to ensure design consistency and smooth implementation.",
+  "Developed wireframes, prototypes, and high-fidelity designs aligned with business and user needs.",
+  "Contributed to improving design systems and maintaining visual consistency across multiple platforms.",
+],
+    },
     {
       company: "Panaceamed.id",
       role: " UI/UX Designer",
