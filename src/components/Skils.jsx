@@ -28,26 +28,26 @@ const Skills = () => {
       name: "UX Research",
       image:
         "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-      color: "from-blue-500 to-cyan-600",
+      color: "from-blue-500 to-cyan-400",
     },
-    {
-      name: "Wireframing",
-      image:
-        "https://cdn-icons-png.flaticon.com/512/1828/1828919.png",
-      color: "from-yellow-500 to-orange-600",
-    },
+{
+  name: "Wireframing",
+  image:
+    "https://cdn-icons-png.flaticon.com/512/1055/1055687.png",
+  color: "from-yellow-500 to-orange-200",
+},
     {
       name: "Prototyping",
       image:
         "https://cdn-icons-png.flaticon.com/512/1055/1055687.png",
       color: "from-green-500 to-emerald-600",
     },
-    {
-      name: "User Testing",
-      image:
-        "https://cdn-icons-png.flaticon.com/512/747/747376.png",
-      color: "from-red-500 to-pink-600",
-    },
+      {
+        name: "Maze",
+        image:
+          "https://cdn.simpleicons.org/maze/ffffff",
+        color: "from-red-500 to-pink-600",
+      },
     {
       name: "UI Design",
       image:
@@ -57,7 +57,7 @@ const Skills = () => {
     {
       name: "Design System",
       image:
-        "https://cdn-icons-png.flaticon.com/512/1688/1688400.png",
+        "https://cdn-icons-png.flaticon.com/512/1055/1055683.png",
       color: "from-cyan-500 to-blue-700",
     },
     {
@@ -70,19 +70,19 @@ const Skills = () => {
       name: "VS Code",
       image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-      color: "from-blue-500 to-blue-700",
+      color: "from-sky-600 to-white",
     },
     {
       name: "Miro",
       image:
         "https://cdn.worldvectorlogo.com/logos/miro-2.svg",
-      color: "from-yellow-400 to-yellow-600",
+      color: "from-yellow-500 to-yellow-200",
     },
     {
       name: "Trello",
       image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
-      color: "from-sky-500 to-blue-700",
+      color: "from-sky-600 to-white",
     },
   ];
 
