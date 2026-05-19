@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Profil from "../assets/Profil.jpg";
+import Profil from "../assets/pp2.jpeg";
 
 const About = () => {
   const aboutRef = useRef(null);
