@@ -36,13 +36,13 @@ const About = () => {
             {/* IMAGE */}
             <div className="relative rounded-[36px] overflow-hidden border-4 border-purple-500 shadow-2xl">
 
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-yellow-300/20 z-10"></div>
+              {/* OVERLAY
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-yellow-300/20 z-10"></div> */}
 
               <img
                 src={Profil}
                 alt="Profile"
-                className="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-700"
+                // className="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-700"
               />
             </div>
 
@@ -75,15 +75,8 @@ const About = () => {
                 <strong className="text-gray-800 dark:text-white">
                   PT Ivonesia Solusi Data
                 </strong>
-                , where I handle several projects such as{" "}
-                <strong className="text-purple-600 dark:text-white">
-                  Sociomile
-                </strong>{" "}
-                and{" "}
-                <strong className="text-purple-600 dark:text-white">
-                  KB AI
-                </strong>
-                . In these projects, I collaborate closely with
+                , where I handle several projects such as
+                Sociomile and KB AI. In these projects, I collaborate closely with
                 product and development teams to create
                 user-centered interfaces and improve overall
                 user experience.

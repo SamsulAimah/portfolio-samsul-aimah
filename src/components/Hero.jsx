@@ -72,20 +72,20 @@ const Hero = () => {
 
         {/* Headline */}
         <h1
-          className={`text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight transition-all duration-1000 delay-400 ${
+          className={`text-4xl sm:text-5xl md:text-5xl font-bold text-white mb-8 leading-tight transition-all duration-1000 delay-400 ${
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
           }`}
         >
-          <span className="block mb-2">Samsul Aimah</span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-            {displayedText}
-            <Cursor cursorStyle="|" cursorColor="#a78bfa" />
-          </span>
+          <span className="block mb-4">Samsul Aimah</span>
+<span className="block text-8xl sm:text-6xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+  {displayedText}
+  <Cursor cursorStyle="|" cursorColor="#a78bfa" />
+</span>
         </h1>
 
         {/* Subtitle */}
         <p
-          className={`text-base sm:text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
+          className={`text-base sm:text-xl md:text-2xl text-white mb-10 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-600 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
