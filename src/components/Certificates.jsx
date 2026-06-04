@@ -10,6 +10,8 @@ import sertifikat7 from "../assets/sertifikat7.jpg";
 import sertifikat8 from "../assets/sertifikat8.png";
 import bnsp from "../assets/bnsp.jpg";
 import dbimbing from "../assets/dbimbing.jpg";
+import kemnaker from "../assets/kemnaker.jpg";
+import ivosights from "../assets/ivosights.jpeg"
 
 const Certificates = () => {
   const certificatesRef = useRef(null);
@@ -28,6 +30,22 @@ const Certificates = () => {
   }, []);
 
   const certificates = [
+    {
+      title:
+        "Magang-Hub Batch 2 Kemnaker x PT Ivonesia Solusi Data UI/UX Designer Intern",
+      issuer: "PT Ivonesia Solusi Data (Ivosights)",
+      date: "2025-2026",
+      image: kemnaker,
+      verified: true,
+    },
+      {
+      title:
+        "UI/UX Designer Intern PT Ivonesia Solusi Data",
+      issuer: "PT Ivonesia Solusi Data (Ivosights)",
+      date: "2025-2026",
+      image: ivosights,
+      verified: true,
+    },
     {
       title:
         "For completing UI/UX Research & Design 101: Belajar UI/UX Design & Metode UX Research",
