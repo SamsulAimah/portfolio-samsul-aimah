@@ -26,10 +26,10 @@ const Experience = () => {
      {
       company: "PT Ivonesia Solusi Data ",
       role: " UI/UX Designer Intern",
-      period: "November 2025 - Mei 2026",
+      period: "November 2025 - May 2026",
       location: "Jakarta Selatan",
     highlights: [
-  "Designed user-centered interfaces for internal and client projects such as Sociomile and KB AI.",
+  "Designed user-centered interfaces for internal and client projects such as Sociomile V2 and KB AI.",
   "Created modern UI/UX designs focused on usability, accessibility, and seamless user experience.",
   "Collaborated closely with product managers and developers to ensure design consistency and smooth implementation.",
   "Developed wireframes, prototypes, and high-fidelity designs aligned with business and user needs.",
@@ -38,8 +38,8 @@ const Experience = () => {
     },
     {
       company: "Panaceamed.id",
-      role: " UI/UX Designer",
-      period: "Desember 2024 - Mei 2025",
+      role: " UI/UX Designer Intern",
+      period: "December 2024 - June 2025",
       location: "Jakarta",
       highlights: [
         "Designed and developed innovative, functional web designs for the company platform.",
@@ -51,8 +51,8 @@ const Experience = () => {
     },
     {
       company: "PT. GreatEdu Global Mahardika",
-      role: "UI/UX Designer",
-      period: "2024",
+      role: "UI/UX Designer Bootcamp",
+      period: "February 2024 - June 2024",
       location: "Jakarta",
       highlights: [
         "Leading the team for mobile application design in developing a donation and cinema ticket booking application (XXI).",
@@ -63,8 +63,8 @@ const Experience = () => {
     },
     {
       company: "PT. Lentera Bangsa Benderang (Binar Academy)",
-      role: "UI/UX Reseach and Design",
-      period: "2023",
+      role: "UI/UX Reseach and Design Bootcamp",
+      period: "August 2023 - December 2023",
       location: "Jakarta",
       highlights: [
         "Designed a mental health application from concept to final testing.",

@@ -107,7 +107,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="/Professional-Resume.pdf"
+            href="/Professional-Resume2.pdf"
             download="Professional-Resume Samsul Aimah.pdf"
             className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-white text-white rounded-2xl font-semibold transition-all duration-300 hover:bg-white/20 flex items-center gap-3"
           >
