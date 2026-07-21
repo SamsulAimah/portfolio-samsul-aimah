@@ -71,7 +71,7 @@ const Certificates = () => {
     {
       title: "UI/UX Designer Bootcamp",
       issuer: "PT. GreatEdu Global Mahardika",
-      date: "2023",
+      date: "2024",
       image: sertifikat8,
       verified: true,
     },
@@ -85,7 +85,7 @@ const Certificates = () => {
     {
       title: "Environmental insights for UI/UX Designer training",
       issuer: "Kementrian Lingkungan Hidup dan Kehutanan",
-      date: "2023",
+      date: "2024",
       image: sertifikat7,
       verified: true,
     },
@@ -99,7 +99,7 @@ const Certificates = () => {
     {
       title: "UI/UX Designer Bootcamp",
       issuer: "PT. GreatEdu Global Mahardika",
-      date: "2023",
+      date: "2024",
       image: sertifikat5,
       verified: true,
     },
